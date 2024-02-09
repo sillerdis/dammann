@@ -15,8 +15,7 @@ module.exports = {
     },
     compress: true,
     port: 9000,
-
-    module = {
+  },
 
         module: {
           rules: [
@@ -30,8 +29,7 @@ module.exports = {
             },
           ],
         },
-      
-  },
+
   plugins: [
     new HtmlWebpackPlugin({
         template: './src/index.html',
