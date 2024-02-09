@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "npx webpack--mode development",
+    "dev": "npx webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack serve --mode development"
   },

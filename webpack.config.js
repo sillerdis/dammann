@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   devServer: {
     static: {
@@ -16,12 +17,12 @@ module.exports = {
     port: 9000,
 
     module.exports = {
-        
+
         module: {
           rules: [
             {
               test: /\.css$/i,
-              use: ["style-loader", "css-loader"],
+              use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
           ],
         },
@@ -31,6 +32,8 @@ module.exports = {
     new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'about.html'
-        })
+        }),
+        new MiniCssExtractPlugin(),
+        
     ],
 };
